@@ -253,7 +253,7 @@ This code provides a complete pipeline for:
 
 You can adjust the parameters in each function (such as the missing value threshold or number of features to select) based on your specific needs.
 
-Remember to:
+Next steps:
 - Adjust the missing value threshold based on your domain knowledge
 - Consider different imputation strategies for different types of features
 - Validate the selected features with domain experts

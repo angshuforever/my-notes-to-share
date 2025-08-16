@@ -35,16 +35,16 @@ Input Dataset (20 columns)
 ┌─────────────────────────────────────────────────────────┐
 │              Data Profiling Engine                      │
 │  • Column analysis (types, patterns, distributions)     │
-│  • Statistical profiling                               │
-│  • Domain detection                                    │
-│  • Quality indicators                                  │
+│  • Statistical profiling                                │
+│  • Domain detection                                     │
+│  • Quality indicators                                   │
 └─────────────────────────────────────────────────────────┘
         ↓
 ┌─────────────────────────────────────────────────────────┐
 │              Rule Processing Pipeline                   │
 │                                                         │
 │  ┌─────────────────┐    ┌─────────────────────────────┐ │
-│  │ Rule Validation │    │   Rule Recommendation      │ │
+│  │ Rule Validation │    │   Rule Recommendation       │ │
 │  │    Engine       │    │       Engine                │ │
 │  │                 │    │                             │ │
 │  │ Input: Rules +  │    │ Input: Dataset Profile      │ │
@@ -56,10 +56,10 @@ Input Dataset (20 columns)
         ↓
 ┌─────────────────────────────────────────────────────────┐
 │                 Unified Dashboard                       │
-│  • Show validation results                             │
-│  • Display recommended rules                           │
-│  • Allow rule selection/modification                   │
-│  • Execute final rule set                              │
+│  • Show validation results                              │
+│  • Display recommended rules                            │
+│  • Allow rule selection/modification                    │
+│  • Execute final rule set                               │
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -617,20 +617,20 @@ async def recommend_rules(dataset_profile: dict):
 ```
 ┌─────────────────────────────────────────────────────────┐
 │                    Frontend (Streamlit)                 │
-│                    Port: 8501                          │
+│                    Port: 8501                           │
 └─────────────────────┬───────────────────────────────────┘
                       │ HTTP Requests
                       ▼
 ┌─────────────────────────────────────────────────────────┐
 │                API Gateway (FastAPI)                    │
-│                    Port: 8000                          │
+│                    Port: 8000                           │
 └─────────────────────┬───────────────────────────────────┘
                       │
                       ▼
 ┌─────────────────────────────────────────────────────────┐
 │              Processing Engine                          │
 │  ┌─────────────────┐    ┌─────────────────────────────┐ │
-│  │ Rule Validation │    │   Rule Recommendation      │ │
+│  │ Rule Validation │    │   Rule Recommendation       │ │
 │  │    Service      │    │       Service               │ │
 │  └─────────────────┘    └─────────────────────────────┘ │
 └─────────────────────────────────────────────────────────┘
